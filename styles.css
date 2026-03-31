@@ -234,7 +234,7 @@ svg * {
     --color-blue-alternate: #1613c2;
 
     --border-radius: 30px;
-    --border: 1px solid var(--color-light);
+    --border: 1px solid var(--color-light-blue);
 
     --font-family-base: "Inter", sans-serif;
     --font-family-accent: "Montserrat", sans-serif;
@@ -300,8 +300,9 @@ body{
 .banner-info {
     font-family: var(--font-family-base);
     font-weight: bold;
-    font-size: 80px;
+    font-size: 60px;
     text-align: center;
+
 }
 .banner-more-info {
     font-family: var(--font-family-accent);
@@ -309,4 +310,30 @@ body{
     font-size: 15px;
     text-align: center;
     padding-bottom: 40px;
+}
+button  {
+    border: var(--border);
+    display: inline-flex;
+    align-items: center;
+    height: 38px;
+    padding-inline: 26px;
+    font-size: 12px;
+    line-height: 2;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: #ffff;
+    text-transformation: uppercase;
+    background-color: transparent;
+    border-radius: var(--border-radius);
+}
+button:hover {
+    background-color: var(--color-light-blue);
+    border: 1px solid var(--color-dark-blue);
+}
+
+.banner-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 100px;
 }
