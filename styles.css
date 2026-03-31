@@ -1,3 +1,19 @@
+@font-face {
+    font-family: "Inter";
+    src: url("./fonts/Inter18pt-Black.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("./fonts/Montserrat-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
 /**
   Нормализация блочной модели
  */
@@ -209,4 +225,56 @@ svg * {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+
+:root {
+    --color-dark: #32353A;
+    --color-dark-blue: #22287E;
+    --color-light-blue: #2366B4;
+    --color-blue-alternate: #1613c2;
+
+    --border-radius: 30px;
+    --border: 1px solid var(--color-light);
+
+    --font-family-base: "Inter", sans-serif;
+    --font-family-accent: "Montserrat", sans-serif;
+    --input-height: 54px;
+
+    --container-width: 1300px;
+    --container-padding-x: 15px;
+
+    --transition-duration: 0,2s;
+
+    --header-height: 90px;
+}
+
+body{
+    background-color: var(--color-dark-blue);
+    font-family: var(--font-family-base), sans-serif;
+    color: #ffff;
+    font-size: 16px;
+    line-height: 1.75;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    padding-inline: 32px;
+    background-color: var(--color-dark);
+
+}
+.header-logo-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+
+}
+.header-logo-item {
+    text-decoration: none;
+    color:#ffff;
 }
