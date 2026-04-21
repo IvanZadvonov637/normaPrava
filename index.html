@@ -129,7 +129,7 @@
 
         <section class="contacts">
             <h2 class="contacts-title">Связаться с нами</h2>
-            <form class="contacts-form" action="#" method="post">
+            <form class="contacts-form" id="contactsForm" action="#" method="post" novalidate>
                 <div class="contacts-form-fields">
                     <div class="contacts-form-field">
                         <label class="visually-hidden" for="phone">Телефон</label>
@@ -139,6 +139,7 @@
                             id="phone"
                             name="phone"
                             placeholder="Телефон">
+                        <span class="contacts-form-error" id="phoneError"></span>
                     </div>
                     <div class="contacts-form-field">
                         <label class="visually-hidden" for="telegram">Telegram</label>
@@ -148,6 +149,7 @@
                             id="telegram"
                             name="telegram"
                             placeholder="Telegram">
+                        <span class="contacts-form-error" id="telegramError"></span>
                     </div>
                     <div class="contacts-form-field">
                         <label class="visually-hidden" for="max">Max</label>
@@ -157,8 +159,10 @@
                             id="max"
                             name="max"
                             placeholder="Max">
+                        <span class="contacts-form-error" id="maxError"></span>
                     </div>
                 </div>
+                <span class="contacts-form-error contacts-form-error--common" id="commonError"></span>
                 <button class="contacts-form-button" type="submit">
                     Отправить заявку
                 </button>
@@ -167,6 +171,9 @@
                     <a href="/privacy" class="contacts-form-privacy-link">политикой обработки персональных данных</a>
                 </p>
             </form>
+            <div class="contacts-success" id="contactsSuccess" hidden>
+                <p class="contacts-success-text">Спасибо! Мы получили вашу заявку и свяжемся с вами в ближайшее время.</p>
+            </div>
         </section>
 
     </main>
@@ -206,5 +213,6 @@
         </div>
     </footer>
 
+    <script src="./index.js"></script>
 </body>
 </html>

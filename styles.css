@@ -563,6 +563,37 @@ button:hover {
     color: #ffff;
 }
 
+.contacts-form-input--error {
+    border-color: #e74c3c;
+}
+
+.contacts-form-error {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #e74c3c;
+    min-height: 18px;
+}
+
+.contacts-form-error--common {
+    text-align: center;
+}
+
+.contacts-success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.contacts-success-text {
+    font-family: var(--font-family-accent);
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--color-white);
+}
+
 
 
 .footer {
