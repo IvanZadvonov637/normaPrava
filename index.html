@@ -24,9 +24,9 @@
 
         <nav class="header-nav">
             <ul class="header-nav-list">
-                <li><a href="/" class="header-nav-link">Услуги</a></li>
-                <li><a href="/" class="header-nav-link">Цены</a></li>
-                <li><a href="/" class="header-nav-link">Контакты</a></li>
+                <li><a href="#services" class="header-nav-link">Услуги</a></li>
+                <li><a href="#benefits" class="header-nav-link">Преимущества</a></li>
+                <li><a href="#contacts" class="header-nav-link">Контакты</a></li>
             </ul>
         </nav>
 
@@ -70,10 +70,10 @@
             <h2 class="visually-hidden">Преимущества</h2>
             <ul class="landing-list">
 
-                <li class="landing-item">
-                    <img src="./images/Лого экспертиза.png" alt="экспертиза" class="landing-item-image">
-                    <h3 class="landing-item-title">Область экспертизы</h3>
-                    <p class="landing-item-description">
+                <li class="landing-item" id="services">
+                    <img src="./images/Лого экспертиза.png" alt="экспертиза" class="landing-item-image" data-animate data-delay="0">
+                    <h3 class="landing-item-title" data-animate data-delay="150">Область экспертизы</h3>
+                    <p class="landing-item-description" data-animate data-delay="300">
                         Наша компания специализируется на помощи и защите прав
                         владельцев автотранспортных средств, но мы также предоставляем
                         широкий спектр юридических услуг, решая любые проблемы
@@ -82,9 +82,9 @@
                 </li>
 
                 <li class="landing-item">
-                    <img src="./images/614ae690-8c34-4edd-80fd-b4482316fd40.png" alt="отдых" class="landing-item-image">
-                    <h3 class="landing-item-title">Работаем по всей России</h3>
-                    <p class="landing-item-description">
+                    <img src="./images/614ae690-8c34-4edd-80fd-b4482316fd40.png" alt="отдых" class="landing-item-image" data-animate data-delay="0">
+                    <h3 class="landing-item-title" data-animate data-delay="150">Работаем по всей России</h3>
+                    <p class="landing-item-description" data-animate data-delay="300">
                         Наша компания предоставляет услуги онлайн. Мы можем помочь вам
                         написать заявление, жалобу, претензию дистанционно — напишем
                         и при желании даже отправим всё за вас.
@@ -92,29 +92,29 @@
                     </p>
                 </li>
 
-                <li class="landing-item">
-                    <h3 class="landing-item-title">Наши преимущества</h3>
-                    <p class="landing-item-description">
+                <li class="landing-item" id="benefits">
+                    <h3 class="landing-item-title" data-animate data-delay="0">Наши преимущества</h3>
+                    <p class="landing-item-description" data-animate data-delay="150">
                         Наша компания обладает рядом преимуществ. Доверяя нам, вы можете
                         быть уверены, что наши специалисты сделают всё возможное для того,
                         чтобы разрешить вашу проблему.
                     </p>
                     <ul class="benefits-list">
-                        <li class="benefits-item">
+                        <li class="benefits-item" data-animate data-delay="300">
                             <img src="./images/Диплом.png" alt="диплом" class="benefits-item-image">
                             <h4 class="benefits-item-title">Годы практики</h4>
                             <p class="benefits-item-description">
                                 Все наши специалисты имеют опыт юридической практики не менее 5 лет.
                             </p>
                         </li>
-                        <li class="benefits-item">
+                        <li class="benefits-item" data-animate data-delay="450">
                             <img src="./images/Персона.png" alt="персона" class="benefits-item-image">
                             <h4 class="benefits-item-title">Персональный подход</h4>
                             <p class="benefits-item-description">
                                 Индивидуальная работа с каждым клиентом позволяет решать даже самые сложные проблемы.
                             </p>
                         </li>
-                        <li class="benefits-item">
+                        <li class="benefits-item" data-animate data-delay="600">
                             <img src="./images/деньги2.png" alt="деньги" class="benefits-item-image">
                             <h4 class="benefits-item-title">Выгода</h4>
                             <p class="benefits-item-description">
@@ -127,7 +127,7 @@
             </ul>
         </section>
 
-        <section class="contacts">
+        <section class="contacts" id="contacts">
             <h2 class="contacts-title">Связаться с нами</h2>
             <form class="contacts-form" id="contactsForm" action="#" method="post" novalidate>
                 <div class="contacts-form-fields">
@@ -142,24 +142,29 @@
                         <span class="contacts-form-error" id="phoneError"></span>
                     </div>
                     <div class="contacts-form-field">
-                        <label class="visually-hidden" for="telegram">Telegram</label>
-                        <input
-                            class="contacts-form-input"
-                            type="text"
-                            id="telegram"
-                            name="telegram"
-                            placeholder="Telegram">
-                        <span class="contacts-form-error" id="telegramError"></span>
-                    </div>
-                    <div class="contacts-form-field">
-                        <label class="visually-hidden" for="max">Max</label>
-                        <input
-                            class="contacts-form-input"
-                            type="text"
-                            id="max"
-                            name="max"
-                            placeholder="Max">
-                        <span class="contacts-form-error" id="maxError"></span>
+                        <div class="contacts-form-tabs">
+                            <button type="button" class="contacts-form-tab contacts-form-tab--active" data-target="telegram">Telegram</button>
+                            <button type="button" class="contacts-form-tab" data-target="max">Max</button>
+                        </div>
+                        <div id="telegramField">
+                            <label class="visually-hidden" for="telegram">Telegram</label>
+                            <input
+                                class="contacts-form-input"
+                                type="text"
+                                id="telegram"
+                                name="telegram"
+                                placeholder="Telegram">
+                        </div>
+                        <div id="maxField" hidden>
+                            <label class="visually-hidden" for="max">Max</label>
+                            <input
+                                class="contacts-form-input"
+                                type="text"
+                                id="max"
+                                name="max"
+                                placeholder="Max">
+                        </div>
+                        <span class="contacts-form-error" id="messengerError"></span>
                     </div>
                 </div>
                 <span class="contacts-form-error contacts-form-error--common" id="commonError"></span>
