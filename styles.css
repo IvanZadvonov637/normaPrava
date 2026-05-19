@@ -140,9 +140,12 @@ html {
     /**
       Snap-контейнер для всей страницы
      */
+    scroll-padding-top: var(--header-height);
+}
+
+html:has(.page-home) {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    scroll-padding-top: var(--header-height);
 }
 
 body {
@@ -725,5 +728,74 @@ button:hover {
 }
 
 .footer-privacy-link:hover {
+    color: var(--color-white);
+}
+
+/* ======= SERVICES PAGE ======= */
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: var(--container-width);
+    margin-inline: auto;
+    padding: 120px 32px 60px;
+}
+
+.services-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 32px 24px;
+    background-color: var(--color-white);
+    border-radius: 16px;
+    text-align: center;
+}
+
+.services-image {
+    width: auto;
+    height: 100px;
+    object-fit: contain;
+}
+
+.services-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.services-text-title {
+    font-family: var(--font-family-base);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-dark);
+}
+
+.services-text-area {
+    font-family: var(--font-family-accent);
+    font-size: 14px;
+    color: var(--color-dark);
+    line-height: 1.6;
+}
+
+.services-button {
+    margin-top: auto;
+    border: 1px solid var(--color-light-blue);
+    color: var(--color-light-blue);
+    background-color: transparent;
+    border-radius: var(--border-radius);
+    height: 38px;
+    padding-inline: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.services-button:hover {
+    background-color: var(--color-light-blue);
     color: var(--color-white);
 }
